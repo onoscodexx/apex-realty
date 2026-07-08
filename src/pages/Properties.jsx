@@ -12,7 +12,7 @@ export default function Properties() {
 
   const [filters, setFilters] = useState({
     type:     'All',
-    status:   'All',
+    status:   'For Rent',
     minPrice: '',
     maxPrice: '',
     bedrooms: 'Any',
@@ -21,7 +21,7 @@ export default function Properties() {
   const [page,          setPage]          = useState(1)
   const [drawerOpen,    setDrawerOpen]    = useState(false)
 
-  useEffect(() => { document.title = 'Properties — Apex Realty' }, [])
+  useEffect(() => { document.title = 'Rental Homes - Houxkeys' }, [])
 
   // Apply filters
   const filtered = useMemo(() => {
@@ -48,7 +48,7 @@ export default function Properties() {
   }
 
   const clearFilters = () => {
-    setFilters({ type: 'All', status: 'All', minPrice: '', maxPrice: '', bedrooms: 'Any', location: '' })
+    setFilters({ type: 'All', status: 'For Rent', minPrice: '', maxPrice: '', bedrooms: 'Any', location: '' })
     setPage(1)
   }
 
@@ -79,7 +79,7 @@ export default function Properties() {
       {/* Property Type */}
       <div className="mb-4">
         <label className="form-label">Property Type</label>
-        {['All', 'House', 'Apartment', 'Land', 'Commercial'].map(t => (
+        {['All', 'House', 'Apartment', 'Flat', 'Terrace', 'Studio', 'Bungalow'].map(t => (
           <div key={t} className="d-flex align-items-center gap-2 mb-1" style={{ cursor: 'pointer' }} onClick={() => setFilter('type', t)}>
             <div style={{
               width: 18, height: 18, borderRadius: '50%',
@@ -95,7 +95,7 @@ export default function Properties() {
       {/* Status */}
       <div className="mb-4">
         <label className="form-label">Status</label>
-        {['All', 'For Sale', 'For Rent'].map(s => (
+        {['For Rent'].map(s => (
           <div key={s} className="d-flex align-items-center gap-2 mb-1" style={{ cursor: 'pointer' }} onClick={() => setFilter('status', s)}>
             <div style={{
               width: 18, height: 18, borderRadius: '50%',
@@ -167,9 +167,9 @@ export default function Properties() {
               <li className="breadcrumb-item active">Properties</li>
             </ol>
           </nav>
-          <h1>Our Properties</h1>
+          <h1>Homes for Rent</h1>
           <p style={{ color: 'rgba(255,255,255,0.6)', margin: 0, fontSize: '1.05rem' }}>
-            Discover exceptional homes and spaces across Nigeria
+            Browse verified rental houses and apartments across Nigeria
           </p>
         </div>
       </header>

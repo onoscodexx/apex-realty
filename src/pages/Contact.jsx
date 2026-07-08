@@ -10,20 +10,20 @@ const officeInfo = [
     city: 'Lagos Office',
     address: '14 Adeola Odeku Street, Victoria Island, Lagos',
     phone: '+234 800 123 4567',
-    email: 'lagos@apexrealty.ng',
+    email: 'lagos@Houxkeysrealty.ng',
     hours: 'Mon – Sat: 8:00 AM – 6:00 PM',
   },
   {
     city: 'Abuja Office',
     address: 'Plot 304 Aminu Kano Crescent, Wuse 2, Abuja',
     phone: '+234 800 765 4321',
-    email: 'abuja@apexrealty.ng',
+    email: 'abuja@Houxkeysrealty.ng',
     hours: 'Mon – Sat: 8:00 AM – 6:00 PM',
   },
 ]
 
 export default function Contact() {
-  useEffect(() => { document.title = 'Contact Us — Apex Realty' }, [])
+  useEffect(() => { document.title = 'Contact Us — Houxkeys' }, [])
 
   const [form, setForm] = useState({
     name: '', email: '', phone: '', subject: '', message: '',
@@ -126,7 +126,7 @@ export default function Contact() {
                             <label className="form-label">Full Name *</label>
                             <input
                               type="text"
-                              className={`form-control-apex${errors.name ? ' border-danger' : ''}`}
+                              className={`form-control-Houxkeys${errors.name ? ' border-danger' : ''}`}
                               placeholder="Your full name"
                               value={form.name}
                               onChange={e => handleChange('name', e.target.value)}
@@ -141,7 +141,7 @@ export default function Contact() {
                             <label className="form-label">Email Address *</label>
                             <input
                               type="email"
-                              className={`form-control-apex${errors.email ? ' border-danger' : ''}`}
+                              className={`form-control-Houxkeys${errors.email ? ' border-danger' : ''}`}
                               placeholder="your@email.com"
                               value={form.email}
                               onChange={e => handleChange('email', e.target.value)}
@@ -156,7 +156,7 @@ export default function Contact() {
                             <label className="form-label">Phone Number</label>
                             <input
                               type="tel"
-                              className="form-control-apex"
+                              className="form-control-Houxkeys"
                               placeholder="+234 800 000 0000"
                               value={form.phone}
                               onChange={e => handleChange('phone', e.target.value)}
@@ -169,12 +169,12 @@ export default function Contact() {
                           <div className="form-group mb-0">
                             <label className="form-label">Subject *</label>
                             <select
-                              className={`form-control-apex${errors.subject ? ' border-danger' : ''}`}
+                              className={`form-control-Houxkeys${errors.subject ? ' border-danger' : ''}`}
                               value={form.subject}
                               onChange={e => handleChange('subject', e.target.value)}
                             >
                               <option value="">Select a subject</option>
-                              <option value="Buy">I want to Buy</option>
+                              <option value="Rent">I want to Rent</option>
                               <option value="Rent">I want to Rent</option>
                               <option value="Sell">I want to Sell</option>
                               <option value="General">General Inquiry</option>
@@ -188,7 +188,7 @@ export default function Contact() {
                           <div className="form-group mb-0">
                             <label className="form-label">Message *</label>
                             <textarea
-                              className={`form-control-apex${errors.message ? ' border-danger' : ''}`}
+                              className={`form-control-Houxkeys${errors.message ? ' border-danger' : ''}`}
                               rows={5}
                               placeholder="Tell us how we can help you..."
                               value={form.message}
@@ -322,7 +322,7 @@ export default function Contact() {
           >
             <MapPin size={44} color="var(--navy)" style={{ opacity: 0.3 }} />
             <p style={{ color: 'var(--text-muted)', fontSize: '1rem', margin: 0, fontFamily: 'var(--font-heading)' }}>
-              Apex Realty — Lagos & Abuja Offices
+              Houxkeys — Lagos & Abuja Offices
             </p>
             <p style={{ color: 'var(--mid-gray)', fontSize: '0.82rem', margin: 0 }}>
               Integrate Google Maps API for live interactive map

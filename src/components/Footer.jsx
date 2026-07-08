@@ -5,7 +5,7 @@ export default function Footer() {
   const year = new Date().getFullYear()
 
   return (
-    <footer className="apex-footer">
+    <footer className="Houxkeys-footer">
       <div className="container py-5">
         <div className="row g-4 py-3">
 
@@ -14,12 +14,11 @@ export default function Footer() {
             <div className="d-flex align-items-center gap-2 mb-3">
               <Building2 size={24} color="var(--gold)" strokeWidth={1.5} />
               <span style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 800, color: 'var(--white)' }}>
-                Apex<span style={{ color: 'var(--gold)' }}> Realty</span>
+                Houx<span style={{ color: 'var(--gold)' }}>keys</span>
               </span>
             </div>
             <p className="mb-4" style={{ maxWidth: 300, lineHeight: 1.85 }}>
-              Nigeria's premier real estate company. We connect discerning buyers, sellers,
-              and tenants with exceptional properties across the country.
+              Houxkeys helps renters find verified homes and gives landlords a safer way to list rental properties.
             </p>
             {/* Social Icons */}
             <div className="d-flex gap-2">
@@ -52,12 +51,12 @@ export default function Footer() {
             <h5>Services</h5>
             <ul className="p-0" style={{ listStyle: 'none' }}>
               {[
-                'Property Sales',
-                'Property Rentals',
-                'Property Management',
-                'Commercial Leasing',
-                'Land Acquisition',
-                'Valuations',
+                'Verified Rentals',
+                'Renter Verification',
+                'Landlord Onboarding',
+                'Listing Review',
+                'Inspection Booking',
+                'Admin Moderation',
               ].map(s => (
                 <li key={s} className="mb-1">
                   <span style={{ fontSize: '0.875rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>{s}</span>
@@ -90,7 +89,7 @@ export default function Footer() {
               </div>
               <div className="d-flex gap-2 align-items-center">
                 <Mail size={15} color="var(--gold)" />
-                <a href="mailto:info@apexrealty.ng">info@apexrealty.ng</a>
+                <a href="mailto:hello@houxkeys.ng">hello@houxkeys.ng</a>
               </div>
               <div className="d-flex gap-2 align-items-center">
                 <Clock size={15} color="var(--gold)" />
@@ -106,7 +105,7 @@ export default function Footer() {
           style={{ borderTop: '1px solid rgba(201,168,76,0.15)', gap: '0.5rem' }}
         >
           <p className="mb-0" style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)' }}>
-            &copy; {year} Apex Realty Nigeria. All rights reserved.
+            &copy; {year} Houxkeys Nigeria. All rights reserved.
           </p>
           <p className="mb-0" style={{ fontSize: '0.8rem', color: 'rgba(255,255,255,0.4)' }}>
             Built by{' '}

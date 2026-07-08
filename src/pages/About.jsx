@@ -3,12 +3,12 @@ import { motion } from 'framer-motion'
 import { Linkedin, Award, Star, Users, Building2, MapPin, Target, Eye } from 'lucide-react'
 
 const team = [
-  { name: 'Adebayo Okafor',    role: 'Chief Executive Officer',       bio: 'A 20-year veteran of Nigerian real estate. Adebayo built Apex from the ground up with a vision of transparent, client-first property services.',      initial: 'A' },
+  { name: 'Adebayo Okafor',    role: 'Chief Executive Officer',       bio: 'A 20-year veteran of Nigerian real estate. Adebayo built Houxkeys from the ground up with a vision of transparent, client-first property services.',      initial: 'A' },
   { name: 'Ngozi Eze',         role: 'Head of Residential Sales',     bio: 'Ngozi leads our residential division with passion and precision, having facilitated over 400 successful property transactions across Lagos and Abuja.', initial: 'N' },
-  { name: 'Tunde Fashola',     role: 'Commercial Properties Director', bio: 'With a background in corporate finance, Tunde specialises in high-value commercial leasing, investment properties, and portfolio acquisitions.',       initial: 'T' },
+  { name: 'Tunde Fashola',     role: 'Rental Operations Director', bio: 'With a background in property operations, Tunde manages landlord onboarding, listing quality, inspections, and renter support across active markets.',       initial: 'T' },
   { name: 'Amaka Nwachukwu',   role: 'Head of Property Management',   bio: 'Amaka oversees the management of over 200 residential and commercial units, ensuring landlords and tenants experience seamless service.',             initial: 'A' },
   { name: 'Emeka Duru',        role: 'Senior Legal Counsel',          bio: 'A certified property law expert, Emeka safeguards every transaction — from due diligence to deed of assignment — ensuring full legal compliance.',       initial: 'E' },
-  { name: 'Fatima Al-Hassan',  role: 'Head of Marketing & Digital',   bio: 'Fatima drives Apex\'s digital presence and brand strategy, connecting properties with the right buyers through innovative marketing campaigns.',           initial: 'F' },
+  { name: 'Fatima Al-Hassan',  role: 'Head of Marketing & Digital',   bio: 'Fatima drives Houxkeys\'s digital presence and brand strategy, connecting properties with the right buyers through innovative marketing campaigns.',           initial: 'F' },
 ]
 
 const awards = [
@@ -19,7 +19,7 @@ const awards = [
 ]
 
 export default function About() {
-  useEffect(() => { document.title = 'About Us — Apex Realty' }, [])
+  useEffect(() => { document.title = 'About Us — Houxkeys' }, [])
 
   return (
     <>
@@ -32,7 +32,7 @@ export default function About() {
               <li className="breadcrumb-item active">About</li>
             </ol>
           </nav>
-          <h1>About Apex Realty</h1>
+          <h1>About Houxkeys</h1>
           <p style={{ color: 'rgba(255,255,255,0.6)', margin: 0, fontSize: '1.05rem' }}>
             Nigeria's most trusted real estate partner since 2009
           </p>
@@ -54,7 +54,7 @@ export default function About() {
                 <h2 style={{ color: 'var(--navy)', marginBottom: 0 }}>Built on Trust,<br />Driven by Results</h2>
                 <div className="gold-divider" />
                 <p style={{ color: 'var(--text-body)', lineHeight: 1.85, marginBottom: '1.25rem' }}>
-                  Founded in 2009, Apex Realty has grown to become one of Nigeria's most trusted real estate companies. What began as a small boutique agency in Victoria Island, Lagos has evolved into a full-service property firm with offices in Lagos, Abuja, and a growing presence in Port Harcourt and the South-South region.
+                  Founded in 2009, Houxkeys has grown to become one of Nigeria's most trusted real estate companies. What began as a small boutique agency in Victoria Island, Lagos has evolved into a full-service property firm with offices in Lagos, Abuja, and a growing presence in Port Harcourt and the South-South region.
                 </p>
                 <p style={{ color: 'var(--text-body)', lineHeight: 1.85, marginBottom: '1.25rem' }}>
                   Over 15 years, we have helped more than 1,200 families and businesses find their ideal properties — from first-time apartment seekers to seasoned investors building multi-property portfolios. Our reputation is built on three pillars: verified listings, expert guidance, and genuine after-sale support.
@@ -83,7 +83,7 @@ export default function About() {
                   <div style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '1rem' }}>
                     <Building2 size={64} color="rgba(201,168,76,0.35)" strokeWidth={1} />
                     <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.85rem', fontFamily: 'var(--font-heading)', fontStyle: 'italic' }}>
-                      Apex Realty Headquarters<br />Victoria Island, Lagos
+                      Houxkeys Headquarters<br />Victoria Island, Lagos
                     </p>
                   </div>
                   {/* Gold accent box */}
@@ -170,7 +170,7 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <p className="section-label">The People Behind Apex</p>
+            <p className="section-label">The People Behind Houxkeys</p>
             <h2 style={{ color: 'var(--white)' }}>Meet Our Team</h2>
             <div className="gold-divider center" />
           </motion.div>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { BedDouble, Bath, Maximize2, MapPin } from 'lucide-react'
 
 export default function PropertyCard({ property, index = 0 }) {
-  const { id, title, status, priceLabel, location, bedrooms, bathrooms, sqft, gradient, type } = property
+  const { id, title, status, priceLabel, location, bedrooms, bathrooms, sqft, images = [], type, verified } = property
 
   return (
     <motion.div
@@ -14,32 +14,15 @@ export default function PropertyCard({ property, index = 0 }) {
       transition={{ duration: 0.5, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ y: -8 }}
     >
-      {/* Image Placeholder */}
       <div className="property-card__image">
-        <div
-          className="property-card__image-inner"
-          style={{ background: gradient }}
-          role="img"
-          aria-label={`${title} property image`}
-        >
-          {/* Decorative overlay pattern */}
-          <div style={{
-            position: 'absolute', inset: 0,
-            background: 'url("data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.04\'%3E%3Cpath d=\'M0 40L40 0H20L0 20M40 40V20L20 40\'/%3E%3C/g%3E%3C/svg%3E")',
-          }} />
-          {/* Type label at bottom */}
-          <div style={{
-            position: 'absolute', bottom: '1rem', right: '1rem',
-            fontSize: '0.7rem', fontWeight: 600, letterSpacing: '0.12em',
-            textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)',
-            fontFamily: 'var(--font-body)',
-          }}>
-            {type}
-          </div>
+        <img className="property-card__image-inner" src={images[0]} alt={title} loading="lazy" />
+        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(10,22,40,0.45), transparent 55%)' }} />
+        <div style={{ position: 'absolute', bottom: '1rem', right: '1rem', fontSize: '0.7rem', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'white' }}>
+          {verified ? 'Verified' : type}
         </div>
 
         {/* Status Badge */}
-        <span className={`property-card__badge property-card__badge--${status === 'For Sale' ? 'sale' : 'rent'}`}>
+        <span className="property-card__badge property-card__badge--rent">
           {status}
         </span>
       </div>

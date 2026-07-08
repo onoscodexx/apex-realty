@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import { Building2, ArrowLeft } from 'lucide-react'
 
 export default function NotFound() {
-  useEffect(() => { document.title = '404 — Page Not Found | Apex Realty' }, [])
+  useEffect(() => { document.title = '404 — Page Not Found | Houxkeys' }, [])
 
   return (
     <div style={{
